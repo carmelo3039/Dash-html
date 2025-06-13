@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Dashboard</title>
+</head>
+
+<body>
+  <div class="grid-container">
+    <header class="header">
+      <div class="menu-icon" onclick="openSidebar()">
+        <span class="material-icons">menu</span>
+      </div>
+      <div class="header-left">
+        <span class="material-icons">search</span>
+      </div>
+      <div class="header-right">
+        <span class="material-icons">notifications</span>
+        <span class="material-icons">mail</span>
+        <span class="material-icons">account_circle</span>
+      </div>
+    </header>
+
+    <aside id="sidebar">
+      <div class="sidebar-title">
+        <div class="sidebar-brand">
+          <span class="material-icons">shopping_cart</span> Store
+        </div>
+        <span class="material-icons" onclick="closeSidebar()">close</span>
+      </div>
+      <ul class="sidebar-list">
+        <li class="sidebar-list-item">
+          <span class="material-icons">dashboard</span> Dashboard
+        </li>
+        <li class="sidebar-list-item">
+          <span class="material-icons">inventory</span> Inventory
+        </li>
+        <li class="sidebar-list-item">
+          <span class="material-icons">category</span> Categories
+        </li>
+        <li class="sidebar-list-item">
+          <span class="material-icons">groups</span> Customers
+        </li>
+        <li class="sidebar-list-item">
+          <span class="material-icons">fact_check</span> Orders
+        </li>
+      </ul>
+    </aside>
+
+    <main class="main-container">
+      <div class="main-title">
+        <h2>Dashboard</h2>
+      </div>
+
+      <div class="main-cards">
+        <div class="card">
+          <div class="card-inner">
+            <h3>Products</h3>
+            <span class="material-icons">inventory_2</span>
+          </div>
+          <h1>239</h1>
+        </div>
+
+        <div class="card">
+          <div class="card-inner">
+            <h3>Categories</h3>
+            <span class="material-icons">category</span>
+          </div>
+          <h1>70</h1>
+        </div>
+
+        <div class="card">
+          <div class="card-inner">
+            <h3>Customers</h3>
+            <span class="material-icons">groups</span>
+          </div>
+          <h1>24</h1>
+        </div>
+
+        <div class="card">
+          <div class="card-inner">
+            <h3>Alerts</h3>
+            <span class="material-icons">notification_important</span>
+          </div>
+          <h1>270</h1>
+        </div>
+      </div>
+
+      <div class="charts">
+        <div class="chart-card">
+          <h2 class="chart-title">Top 5 Products</h2>
+          <div id="bar-chart"></div>
+        </div>
+
+        <div class="chart-card">
+          <h2 class="chart-title">Purchase and Sales Orders</h2>
+          <div id="area-chart"></div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
